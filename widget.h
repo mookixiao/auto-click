@@ -4,6 +4,7 @@
 #include <QWidget>
 
 QT_BEGIN_NAMESPACE
+class QMouseEvent;
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
 
@@ -17,5 +18,9 @@ public:
 
 private:
     Ui::Widget *ui;
+
+    void recordStart();
+
+    void mousePressEvent(QMouseEvent *event);
 };
 #endif // WIDGET_H
