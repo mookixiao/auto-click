@@ -7,6 +7,8 @@
 #include <QPair>
 #include <QWidget>
 
+#include <QHotkey/qhotkey.h>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
@@ -29,9 +31,11 @@ private:
     QList<QPair<QPoint, QColor>> ckPoints;
     QPoint clkPoint;
 
+    QHotkey* hotkey;
+
     void recordBtnClicked();
 
-    void mousePressEvent(QMouseEvent *event);
+    void addPoint();
 
     void running();
 };
